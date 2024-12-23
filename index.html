@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crud Full product management system" />
+    <title>Full product management system</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <!-- Head -->
+      <div class="head">
+        <h2>Crud</h2>
+        <p>product management system</p>
+      </div>
+      <!-- Head -->
+      <!-- Inputs -->
+      <div class="inputs">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price">
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="taxes"
+            placeholder="Taxes"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="ads"
+            placeholder="Ads"
+          />
+          <input
+            onkeyup="getTotal()"
+            type="number"
+            id="discount"
+            placeholder="Discount"
+          />
+          <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <button id="submit">Create</button>
+      </div>
+      <!-- Inputs -->
+      <!-- Outputs -->
+      <div class="outputs">
+        <div class="search-box">
+          <input
+            onkeyup="search(this.value)"
+            type="text"
+            id="search"
+            placeholder="Search"
+          />
+          <div class="btns">
+            <button onclick="getSearchMood(this.id)" id="search-title">
+              Search By Title
+            </button>
+            <button onclick="getSearchMood(this.id)" id="search-category">
+              Search By Category
+            </button>
+          </div>
+        </div>
+        <div id="delete-all"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+      <!-- Outputs -->
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
